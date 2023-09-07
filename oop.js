@@ -64,3 +64,13 @@ console.log(updateProfile(newUser));
 /* delete object property*/
 delete userProfile.age;
 console.log(userProfile);
+let data = "";
+for (info in userProfile) {
+  console.log(info, userProfile[info]);
+  data += `<div> my ${info} is ${userProfile[info]}`;
+}
+console.log(data);
+let elemnet = document.createElement("div");
+elemnet.innerHTML = data;
+
+document.body.appendChild(elemnet);
